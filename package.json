@@ -1,0 +1,25 @@
+{
+  "name": "skelm-code-reviewer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Autonomous GitHub PR reviewer built on the skelm workflow framework.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "review:once": "skelm run workflows/review-prs.workflow.ts",
+    "gateway": "skelm gateway start --foreground",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@skelm/core": "link:../skelm/packages/core",
+    "@skelm/pi": "link:../skelm/packages/pi",
+    "skelm": "link:../skelm/packages/skelm",
+    "zod": "^4.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
